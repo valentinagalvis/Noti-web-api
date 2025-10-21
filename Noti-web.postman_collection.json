@@ -1,0 +1,19 @@
+{
+	"info": {
+		"_postman_id": "6092e9be-a8c9-48af-83b0-4394852f375f",
+		"name": "Noti-web",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49357360",
+		"_collection_link": "https://danniittasanchez30-3051644.postman.co/workspace/Valentina-Galvis's-Workspace~c857ebb5-cc6b-496f-888e-00bd003fb01b/collection/49357360-6092e9be-a8c9-48af-83b0-4394852f375f?action=share&source=collection_link&creator=49357360"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
