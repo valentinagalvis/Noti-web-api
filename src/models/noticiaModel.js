@@ -35,4 +35,4 @@ const noticiaSchema = mongoose.Schema({
     }
 });
 
-module.exports = noticiaSchema;
+module.exports = mongoose.model("Noticia", noticiaSchema);
