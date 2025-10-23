@@ -10,11 +10,13 @@ const mongoose = require("mongoose");
 
 
 const userRoutes = require("./routes/userRoutes");
+const noticiaRoutes = require("./routes/noticiaRoutes");
 
 app.use(parser.urlencoded({ extended: false })); 
 app.use(parser.json()); 
 
 app.use("/api", userRoutes);
+app.use("/api", noticiaRoutes);
 app.use(express.json());
 console.log("URI detectada:", process.env.MONGO_URI);
 
