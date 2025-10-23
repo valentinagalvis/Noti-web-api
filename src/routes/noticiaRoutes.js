@@ -12,9 +12,18 @@ router.post("/noticia/add",(req,res) => {
    .catch((error) => res.json({message: error}));
 });
 
-//Metodo GET, para traer todos los datos de las noticias de la base de datos
+//Metodo GET, para consultar todos los datos de las noticias de la base de datos
 router.get("/noticia/all", (req,res) => {
     noticiaSchema.find()
+    .then((data) => res.json(data))
+    .catch((error) => res.json({message: error}));
+});
+
+//Metodo GET con parametros, para consultar una noticia por su id
+router.get("/noticia/:id",(req,res) => {
+    const { id } = req.params;
+    noticiaSchema
+    .findById(id)
     .then((data) => res.json(data))
     .catch((error) => res.json({message: error}));
 });
