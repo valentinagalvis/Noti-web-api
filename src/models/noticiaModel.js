@@ -33,4 +33,6 @@ const noticiaSchema = mongoose.Schema({
         type: Date,
         default: Date.now
     }
-})
+});
+
+module.exports = noticiaSchema;
