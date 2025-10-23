@@ -27,3 +27,15 @@ router.get("/noticia/:id",(req,res) => {
     .then((data) => res.json(data))
     .catch((error) => res.json({message: error}));
 });
+
+//Metodo PUT, para modificar datos de una noticia por su id
+router.put("/noticia/:id",(req,res) => {
+    const { id } = req.params;
+    const { titulo, contenido, autor, categoria, fuente, revisado, fechaPublicacion, fechaRegistroBD } = req.body;
+    noticiaSchema
+    .updateOne({ _id: id },{
+        $set: { titulo, contenido, autor, categoria, fuente, revisado, fechaPublicacion, fechaRegistroBD}
+    })
+    .then((data) => res.json(data))
+    .catch((error) => res.json({ message: error}));
+});
