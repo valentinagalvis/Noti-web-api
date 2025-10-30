@@ -21,8 +21,8 @@ router.get("/usuarios", (req, res) => {
 // put
 router.put("/usuarios/:id", (req, res) => {
   const { id } = req.params;
-  const { nombre, correo, contraseña, rol } = req.body;
-  Usuario.updateOne({ _id: id }, { $set: { nombre, correo, rol } })
+  const { nombre, correo, contrasena, rol } = req.body;
+  Usuario.updateOne({ _id: id }, { $set: { nombre, correo, contrasena, rol } })
     .then((data) => res.json({ mensaje: "Usuario actualizado correctamente", data }))
     .catch((error) => res.status(500).json({ mensaje: "Error al actualizar usuario", error }));
 });
