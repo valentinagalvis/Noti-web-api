@@ -28,6 +28,13 @@ router.get("/noticia/:id", (req,res) => {
     .catch((error) => res.json({ message: error }));
 });
 
+//Metodo GET con parmetro, este metodo permite consultar noticias por la categoria de Arte
+router.get("/noticia/arte", (req,res) =>{ 
+noticiaSchema.find({categoria:{$eq:"Arte"}})
+             .then((data) => res.json(data))
+             .catch((error) => res.json({message: error}));
+});
+
 //Metodo PUT, para modificar datos de una noticia por su id
 router.put("/noticia/:id", (req,res) => {
     const { id } = req.params;
