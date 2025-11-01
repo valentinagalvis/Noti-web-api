@@ -33,6 +33,13 @@ noticiaSchema.find({categoria:{$eq:"Moda"}})
              .catch((error) => res.json({message: error}));
 });
 
+//Metodo GET con parmetro, este metodo permite consultar noticias por la categoria de Cultura
+router.get("/noticias/cultura", (req,res) =>{ 
+noticiaSchema.find({categoria:{$eq:"Cultura"}})
+             .then((data) => res.json(data))
+             .catch((error) => res.json({message: error}));
+});
+
 //Metodo GET con parametros, para consultar una noticia por su id
 router.get("/noticia/:id", (req,res) => {
     const { id } = req.params;
