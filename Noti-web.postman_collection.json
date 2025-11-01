@@ -72,6 +72,332 @@
 				"header": []
 			},
 			"response": []
+		},
+		
+		{
+			"name": "POST",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Valentina G\",\r\n  \"correo\": \"valen@tina1.com\",\r\n  \"contraseña\": \"123456\",\r\n  \"rol\": \"Editor\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/usuarios/68f6cce55d7b4a9bce6fe038",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"usuarios",
+						"68f6cce55d7b4a9bce6fe038"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "noticia/all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/noticia/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"noticia",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "noticias/arte",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/noticias/arte",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"noticias",
+						"arte"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "noticias/moda",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/noticias/moda",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"noticias",
+						"moda"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "noticias/cultura",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/noticias/cultura",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"noticias",
+						"cultura"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "noticia/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/noticia/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"noticia",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "68f9ae5c3867a63f69cd292b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "noticia/add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"titulo\": \"La UdeA y el Metro de Medellín entregaron nuevo mural en homenaje a Miguel Valencia\",\r\n   \"contenido\": \"A las afueras de la estación Universidad del Metro ahora hay un mural en memoria del periodista que mantuvo informada con tiza durante 50 años a la comunidad universitaria. Desde este martes, al bajar el tramo de escaleras del Metro que conduce a la entrada de la Universidad de Antioquia, se puede ver cómo lo que antes era un muro gris, ahora es un homenaje a la vida de Miguel Valencia, “el periodista de tiza en mano” que por más de 50 años se encargó de mantener informada a la comunidad universitaria. La nueva obra de arte, producto de una colaboración entre el Alma Máter y el Metro de Medellín, tiene dos lados: en uno de ellos reza “El día más bello, hoy”, una de las frases que solía escribir Miguel en sus tableros, y en el reverso está su rostro, su nombre completo, el año en que nació y en el que murió.\",\r\n   \"autor\": \"María José Chitiva Londoño\",\r\n   \"categoria\": \"Arte\",\r\n   \"fuente\": \"EL COLOMBIANO\",\r\n   \"revisado\": \"true\",\r\n   \"fechaPublicacion\": \"10-28-2025\",\r\n   \"fechaRegistroBD\": \"10-29-2025\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/noticia/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"noticia",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "noticia2/add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"titulo\": \"Ricardo Silva Romero transforma la tragedia en arte con Mural, su nueva novela sobre la toma del Palacio de Justicia\",\r\n   \"contenido\": \"Cuarenta años después de la toma y retoma del Palacio de Justicia, uno de los capítulos más desgarradores de la historia colombiana, Ricardo Silva Romero convierte la tragedia en literatura. Mural (Alfaguara, 2025) reconstruye los hechos y los reimagina desde la humanidad, la memoria y la compasión. Con su estilo poético, cinematográfico y profundamente humano, el autor levanta una obra coral que, como su título sugiere, es un gran fresco de voces, heridas y resistencias. Silva Romero nos conduce a lo largo de las horas del 6 y 7 de noviembre de 1985, y de las décadas de violencia que las antecedieron, para mostrarnos a guerrilleros, magistrados, militares, periodistas y familiares en el mismo lienzo de la historia. En Mural, la ficción busca poner en escena lo humano como el duelo, la fe, la furia y la persistencia de un país que aún intenta comprenderse.\",\r\n   \"autor\": \"María Jimena Delgado Díaz\",\r\n   \"categoria\": \"Cultura\",\r\n   \"fuente\": \"EL TIEMPO\",\r\n   \"revisado\": \"true\",\r\n   \"fechaPublicacion\": \"10-30-2025\",\r\n   \"fechaRegistroBD\": \"10-31-2025\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/noticia/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"noticia",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "noticia3/add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"titulo\": \"Journey in Pairs x Sybilla: la nueva colección de Falabella inspirada en la tropicalidad de Colombia\",\r\n   \"contenido\": \"Con una apuesta por la creatividad y el talento local, Falabella lanzó una nueva colaboración de su marca juvenil Sybilla con las creadoras de contenido y expertas en moda Dani y Melo De León, conocidas como ‘Journey in Pairs’. La colección rinde homenaje a la tropicalidad y diversidad que caracterizan a Colombia, con prendas versátiles pensadas para llevar en cualquier clima o región del país.\",\r\n   \"autor\": \"Angie Tatiana Rodriguez Bernal\",\r\n   \"categoria\": \"Moda\",\r\n   \"fuente\": \"EL TIEMPO\",\r\n   \"revisado\": \"true\",\r\n   \"fechaPublicacion\": \"10-28-2025\",\r\n   \"fechaRegistroBD\": \"10-31-2025\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/noticia/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"noticia",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "noticia/:id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\": \"la nueva moda de chaquetas\",\r\n    \"fechaPublicacion\": \"10-10-2025\"\r\n} \r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/noticia/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"noticia",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "68f9b1b93867a63f69cd2931"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "noticia/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/noticia/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"noticia",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "68f9b1b93867a63f69cd2931"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
