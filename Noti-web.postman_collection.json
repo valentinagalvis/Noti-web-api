@@ -348,6 +348,114 @@
 				}
 			},
 			"response": []
-		}
+		},
+		{
+  "name": "Categorías",
+  "item": [
+    {
+      "name": "POST Crear categoría",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Cultura\",\n  \"descripcion\": \"Noticias relacionadas con arte, música y tradiciones\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/categorias/add",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "categorias",
+            "add"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET Categorías",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/categorias/all",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "categorias",
+            "all"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PUT Actualizar categoría",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Moda\",\n  \"descripcion\": \"Noticias sobre tendencias de ropa y estilo\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/categorias/ID_DE_LA_CATEGORIA",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "categorias",
+            "ID_DE_LA_CATEGORIA"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE Eliminar categoría",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/categorias/ID_DE_LA_CATEGORIA",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "categorias",
+            "ID_DE_LA_CATEGORIA"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
+
 	]
 }
