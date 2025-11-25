@@ -8,14 +8,14 @@ const port = 3000;
 const mongoose = require("mongoose");
 
 
-
+const authRoutes = require("./routes/authentication");
 const userRoutes = require("./routes/userRoutes");
 const noticiaRoutes = require("./routes/noticiaRoutes");
 const categoriaRoutes = require("./routes/categoriaRoutes"); 
 
 app.use(parser.urlencoded({ extended: false })); 
 app.use(parser.json()); 
-
+app.use("/api", authRoutes);
 app.use("/api", userRoutes);
 app.use("/api", noticiaRoutes);
 app.use("/api", categoriaRoutes);
