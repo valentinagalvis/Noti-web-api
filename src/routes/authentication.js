@@ -7,10 +7,18 @@ const verifyToken = require("./validate_token");
 
 //Revisar esta forma de autenticarse https://www.digitalocean.com/community/tutorials/nodejs-jwt-expressjs
 router.post("/signup", async (req, res) => {
-  const { correo, contraseña } = req.body;
-  const user = new userSchema({
+  const { nombre, correo, contraseña, rol} = req.body;
+  // Validar que todos los campos requeridos estén presentes
+    if (!nombre || !correo || !contraseña) {
+      return res.status(400).json({ 
+        error: "Todos los campos son requeridos: nombre, correo, contraseña" 
+      });
+    }
+  const user = new userSchema({ 
+    nombre: nombre,
     correo: correo,
     contraseña: contraseña,
+    rol: rol,
   });
   user.contraseña = await user.encryptClave(user.contraseña);
   await user.save(); //save es un método de mongoose para guardar datos en MongoDB //segundo parámetro: un texto que hace que el código generado sea único //tercer parámetro: tiempo de expiración (en segundos, 24 horas en segundos)
@@ -22,6 +30,7 @@ router.post("/signup", async (req, res) => {
     auth: true,
     token: token,
     user,
+    message: `Usuario registrado como ${rol || 'lector'}`
   });
 });
 
